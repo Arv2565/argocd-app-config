@@ -19,12 +19,16 @@ spec:
           image: arv2565/hello-flask:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 5000
+            - containerPort: 8080
           readinessProbe:
             httpGet:
               path: /healthz
-              port: 5000
+              port: 8080
+            initialDelaySeconds: 2
+            periodSeconds: 5
           livenessProbe:
             httpGet:
               path: /healthz
-              port: 5000
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10

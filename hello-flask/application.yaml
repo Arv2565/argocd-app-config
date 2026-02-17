@@ -11,7 +11,7 @@ spec:
     path: hello-flask
   destination:
     server: https://kubernetes.default.svc
-    namespace: demo
+    namespace: gitops-demo
   syncPolicy:
     automated:
       prune: true
