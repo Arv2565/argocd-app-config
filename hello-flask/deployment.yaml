@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: hello-flask
-          image: arv2565/hello-flask:2c7d65b
+          image: arv2565/hello-flask:bc107bd
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
